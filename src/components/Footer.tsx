@@ -1,6 +1,8 @@
 import { Bot, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -18,7 +20,7 @@ export default function Footer() {
               <span className="text-xl md:text-2xl font-bold">Autobotec.net</span>
             </div>
             <p className="text-gray-400 mb-4 md:mb-6 leading-relaxed">
-              Transforming businesses through innovative digital solutions. We craft experiences that drive growth and success.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
@@ -37,14 +39,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">Services</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">{t('footer.services')}</h3>
             <ul className="space-y-3">
               <li>
                 <button
                   onClick={() => scrollToSection('web-development')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  Web Development
+                  {t('webdev.title')}
                 </button>
               </li>
               <li>
@@ -52,7 +54,7 @@ export default function Footer() {
                   onClick={() => scrollToSection('mobile-development')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  Mobile Development
+                  {t('mobiledev.title')}
                 </button>
               </li>
               <li>
@@ -60,7 +62,7 @@ export default function Footer() {
                   onClick={() => scrollToSection('ai-agents')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  AI Agents
+                  {t('ai.title')}
                 </button>
               </li>
               <li>
@@ -68,14 +70,14 @@ export default function Footer() {
                   onClick={() => scrollToSection('digital-marketing')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  Digital Marketing
+                  {t('marketing.title')}
                 </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">Contact</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">{t('footer.contact')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
@@ -100,12 +102,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">Our Team</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">{t('footer.ourTeam')}</h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              A passionate group of developers, designers, and strategists dedicated to creating exceptional digital experiences.
+              {t('footer.teamDesc')}
             </p>
             <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              Join Our Team
+              {t('footer.joinTeam')}
             </button>
           </div>
         </div>
@@ -113,14 +115,14 @@ export default function Footer() {
         <div className="border-t border-slate-800 mt-10 md:mt-12 pt-6 md:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-gray-400 text-sm text-center sm:text-left">
-              &copy; 2025 Autobotec.net. All rights reserved.
+              &copy; 2025 Autobotec.net. {t('footer.rights')}
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Privacy Policy
+                {t('footer.privacy')}
               </a>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Terms of Service
+                {t('footer.terms')}
               </a>
             </div>
           </div>
