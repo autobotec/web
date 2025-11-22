@@ -34,7 +34,11 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
     { id: 'responsive-design', labelEn: 'Responsive Design', labelEs: 'Diseño Responsivo' },
     { id: 'lightning-fast', labelEn: 'Lightning Fast', labelEs: 'Súper Rápido' },
     { id: 'modern-ui', labelEn: 'Modern UI/UX', labelEs: 'UI/UX Moderno' },
-    { id: 'secure-reliable', labelEn: 'Secure & Reliable', labelEs: 'Seguro y Confiable' }
+    { id: 'secure-reliable', labelEn: 'Secure & Reliable', labelEs: 'Seguro y Confiable' },
+    { id: 'ios', labelEn: 'iOS & Android', labelEs: 'iOS y Android' },
+    { id: 'tablet', labelEn: 'Tablet Optimized', labelEs: 'Optimizado para Tablets' },
+    { id: 'wearables', labelEn: 'Wearables', labelEs: 'Dispositivos Portátiles' },
+    { id: 'offline', labelEn: 'Offline-First', labelEs: 'Primero Sin Conexión' }
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
